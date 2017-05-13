@@ -13,12 +13,10 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Request;
 import javax.ws.rs.core.UriInfo;
 
-
 import com.alexpinchuk.controller.MainController;
 import com.alexpinchuk.model.Article;
 import com.sun.jersey.api.NotFoundException;
 import org.apache.log4j.Logger;
-
 
 @Path("/articles")
 public class MainService {
@@ -59,6 +57,7 @@ public class MainService {
         } catch (NotFoundException e){
 	        logger.error(e);
         }
+
         return art;
 	}
 
